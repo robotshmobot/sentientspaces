@@ -1,0 +1,29 @@
+body {
+  background-color: #21212a;
+  font-family: 'DM Mono', monospace;
+  color: #f1f1f8;
+  font-size: 14px;
+  line-height: 16px;
+  margin: 5px;
+}
+
+h1 {
+  font-size: 32px;
+  font-family: 'DM Sans' sans-serif;
+  font-weight: medium;
+}
+
+.card {
+  padding: 15px;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 640px;
+}
+
+@media screen and (max-width: 520px) {
+.card {
+    padding: 15px;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 480px;
+}
