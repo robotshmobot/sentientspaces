@@ -55,7 +55,7 @@ p {
     padding-bottom: 50%;
 }
 
-iframe !important {
+#iframe !important {
     position: absolute;
     border: 0px;
     left: 0%;
@@ -125,8 +125,6 @@ li + li {
     height: 1px;
     background: rgba(255, 255, 255, 0.1);
     width: 100%;
-    margin-top: 5px;
-    padding-top: 5px;
 }
 
     @media screen and (min-width: 1920px) {
