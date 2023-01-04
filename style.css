@@ -55,7 +55,7 @@ p {
     padding-bottom: 50%;
 }
 
-#iframe !important {
+iframe !important {
     position: absolute;
     border: 0px;
     left: 0%;
@@ -111,8 +111,10 @@ hr {
 }
 
 ol {
+    padding-left: 0px;
     list-style: none;
     counter-reset: item;
+
 }
 
 li::before {
@@ -121,10 +123,10 @@ li::before {
 }
 
 li + li {
-    border: 0;
-    height: 1px;
-    background: rgba(255, 255, 255, 0.1);
     width: 100%;
+    border-top: 1 px solid rgba(255, 255, 255, 0.1);
+    margin-top: 10px;
+    padding-top: 10px;
 }
 
     @media screen and (min-width: 1920px) {
