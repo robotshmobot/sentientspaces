@@ -22,7 +22,7 @@
         fetch('./spaces.json')
             .then(res => res.json())
             .then(json => {
-                data.forEach(item => {
+                this.data.forEach(item => {
                     listEl.insertAdjacentHTML(`
                         <iframe id="iframe" src="${item.iframe}"></iframe>
                         <div class="stream-bar">
