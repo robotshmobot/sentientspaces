@@ -24,6 +24,12 @@ p {
     opacity: 0.8;
 }
 
+.text-block {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s;
+}
+
 .sentient-title {
     width: 100%;
 }
@@ -32,6 +38,7 @@ p {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
     grid-gap: 20px;
 }
 
