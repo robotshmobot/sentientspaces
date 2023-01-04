@@ -18,28 +18,26 @@
     </style>
 
     <script>
+        const listEl = document.querySelector('#card');
         fetch('./spaces.json')
-            .then(response => response.json())
+            .then(res => res.json())
             .then(json => {
-                // loop through the JSON data
-                for (let item of json) {
-                    // create a new element for each item
-                    let newElement = document.createElement('div');
-                    newElement.innerHTML = `
-        <iframe src="${item.iframe}"></iframe>
-        <a href="${item.spotify}">Spotify</a>
-        <a href="${item.apple}">Apple Music</a>
-        <a href="${item.youtube}">YouTube</a>
-        <h1>${item.album}</h1>
-        <ol>
-          ${item.tracks.map(track => `<li>${track}</li>`).join('')}
-        </ol>
-        <p>${item.description}</p>
-        <p>${item.date}</p>
-      `;
-                    // append the new element to the parent element
-                    document.querySelector('#card').appendChild(newElement);
-                }
+                data.forEach(item => {
+                    listEl.insertAdjacentHTML(`
+                        <iframe id="iframe" src="${item.iframe}"></iframe>
+                        <div class="stream-bar">
+                            <a href="${item.spotify}" target="_blank"><img src="img/icon-spotify.svg" /></a>
+                            <a href="${item.apple}" target="_blank"><img src="img/icon-apple.svg" /></a>
+                            <a href="${item.youtube}" target="_blank"><img src="img/icon-youtube.svg" /></a>
+                        </div>
+                        <h1>${item.album}</h1>
+                        <div class="track-list-container">
+                            <ol>${item.tracks}</ol>
+                        </div>
+                        <p>${item.description}</p>
+                        <p>${item.date}</p>
+                        `);
+                });
             });
     </script>
 
@@ -49,7 +47,7 @@
     <img class="sentient-title" src="img/sentient-spaces.svg" />
 
     <div class="page-container">
-        <div id="card"> </div>
+        <div id="card"></div>
     </div>
         
 </body>
