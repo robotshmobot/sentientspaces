@@ -19,11 +19,11 @@
 
     <script>
         const listEl = document.querySelector('#card');
-        fetch('./spaces.json')
+        fetch('spaces.json')
             .then(res => res.json())
             .then(json => {
-                this.data.forEach(item => {
-                    listEl.insertAdjacentHTML(`
+                json.forEach(item => {
+                    listEl.insertAdjacentHTML('beforeend', `
                         <iframe id="iframe" src="${item.iframe}"></iframe>
                         <div class="stream-bar">
                             <a href="${item.spotify}" target="_blank"><img src="img/icon-spotify.svg" /></a>
@@ -32,7 +32,7 @@
                         </div>
                         <h1>${item.album}</h1>
                         <div class="track-list-container">
-                            <ol>${item.tracks}</ol>
+                            ${item.tracks}
                         </div>
                         <p>${item.description}</p>
                         <p>${item.date}</p>
