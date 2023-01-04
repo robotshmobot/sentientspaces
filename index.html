@@ -17,30 +17,31 @@
         @import url('https://fonts.googleapis.com/css2?family=DM+Mono&family=DM+Sans:wght@500&display=swap');
     </style>
 
-    <script>// Fetch the JSON data
+    <script>
         fetch('spaces.json')
             .then(response => response.json())
-            .then(data => {
-                // Populate the page with the data
-                data.forEach(item => {
-                    const card = document.createElement('div');
-                    card.className = 'card';
-                    card.innerHTML = `
-              <div class="player-square">
-                <iframe src="${item.iframe}"></iframe>
-              </div>
-              <div class="details-block">
-                <h1>${item.title}</h1>
-                <ol>
-                  ${item.tracks.map(track => `<li>${track}</li>`).join('')}
-                </ol>
-                <p>${item.description}</p>
-                <p>${item.date}</p>
-              </div>
-            `;
-                    document.getElementById('cards').appendChild(card);
-                });
-            });</script>
+            .then(json => {
+                // loop through the JSON data
+                for (let item of json) {
+                    // create a new element for each item
+                    let newElement = document.createElement('div');
+                    newElement.innerHTML = `
+        <iframe src="${item.iframe}"></iframe>
+        <a href="${item.spotify}">Spotify</a>
+        <a href="${item.apple}">Apple Music</a>
+        <a href="${item.youtube}">YouTube</a>
+        <h1>${item.album}</h1>
+        <ol>
+          ${item.tracks.map(track => `<li>${track}</li>`).join('')}
+        </ol>
+        <p>${item.description}</p>
+        <p>${item.date}</p>
+      `;
+                    // append the new element to the parent element
+                    document.querySelector('#card').appendChild(newElement);
+                }
+            });
+    </script>
 
 
 </head>
@@ -48,7 +49,7 @@
     <img class="sentient-title" src="img/sentient-spaces.svg" />
 
     <div class="page-container">
-        <div id="cards"></div>
+        <div id="card"> </div>
     </div>
         
 </body>
