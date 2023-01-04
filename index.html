@@ -16,6 +16,24 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=DM+Mono&family=DM+Sans:wght@500&display=swap');
     </style>
+
+    <script>// Fetch the JSON data
+        fetch('spaces.json')
+            .then(response => response.json())
+            .then(data => {
+                // Populate the page with the data
+                document.getElementById('title').innerHTML = data.album;
+                document.getElementById('date').innerHTML = data.date;
+                document.getElementById('iframe').src = data.iframe;
+                data.tracks.forEach(item => {
+                    const li = document.createElement('li');
+                    li.innerHTML = item;
+                    document.getElementById('numbered-list').appendChild(li);
+                });
+                document.getElementById('description').innerHTML = data.description;
+            });</script>
+
+
 </head>
 <body>
     <img class="sentient-title" src="img/sentient-spaces.svg" />
@@ -23,152 +41,17 @@
     <div class="page-container">
         <div class="card">
             <div class="player-square">
-                <iframe style="border: 0;" src="https://bandcamp.com/EmbeddedPlayer/album=2942806774/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/" seamless><a href="https://sentientspaces.bandcamp.com/album/trash-meditation">Trash Meditation by Sentient Spaces</a></iframe>
+                <iframe id="iframe"></iframe>
             </div>
-            <div class="details-block">
-                <div class="stream-bar">
-                    <a class="stream-button" href="https://open.spotify.com/album/5cXLtQYG0llZvArSoSJVl0?si=5sM-EYVHQjmpD2odto6jYw" target="_blank"><img src="img/icon-spotify.svg" /></a>
-                    <a class="stream-button" href="https://music.apple.com/ca/album/trash-meditation/1650280522" target="_blank"><img src="img/icon-apple.svg" /></a>
-                    <a class="stream-button" href="#" target="_blank"><img src="img/icon-youtube.svg" /></a>
-                </div>
-                <h1>Trash Meditation</h1>
-                <div class="track-list-container">
-                    <div class="track-row"><div>01</div><div>For Rats That Eat My Tomatoes</div></div>
-                    <hr />
-                    <div class="track-row"><div>02</div><div>For Compostable Summer Labour</div></div>
-                    <hr />
-                    <div class="track-row"><div>03</div><div>For Waste Management Systems</div></div>
-                    <hr />
-                    <div class="track-row"><div>04</div><div>For Things That Cannot Be Recycled</div></div>
-                    <hr />
-                    <div class="track-row"><div>05</div><div>For Indulgent Landfill Gulls</div></div>
-                </div>
-                <p>Little bit by itty bitty bit all our materials build up to become a bothersome bunch of shit.</p>
-                <p>2022-10-21</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="player-square">
-                <iframe style="border: 0;" src="https://bandcamp.com/EmbeddedPlayer/album=1128288492/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/" seamless><a href="https://sentientspaces.bandcamp.com/album/the-appearance-of-faces-is-noise">The Appearance of Faces Is Noise by Sentient Spaces</a></iframe>
-            </div>
-            <p class="details-block">
-                <div class="stream-bar">
-                    <a class="stream-button" href="https://open.spotify.com/album/6ZRxq19kFtCpuiJENGhx5x?si=5fGhRhSwR56gZ9s_up4XGQ" target="_blank"><img src="img/icon-spotify.svg" /></a>
-                    <a class="stream-button" href="https://music.apple.com/ca/album/the-appearance-of-faces-is-noise/1640571689" target="_blank"><img src="img/icon-apple.svg" /></a>
-                    <a class="stream-button" href="https://music.youtube.com/playlist?list=OLAK5uy_kJYNGl8XrI-S1BivehpcE8AKS71FY6ZAQ" target="_blank"><img src="img/icon-youtube.svg" /></a>
-                </div>
-                <h1>The Appearance of Faces Is Noise</h1>
-                <div class="track-list-container">
-                    <div class="track-row"><div>01</div><div>Postanthro Outerlands</div></div>
-                    <hr />
-                    <div class="track-row"><div>02</div><div>Phantom-Computer Interface</div></div>
-                    <hr />
-                    <div class="track-row"><div>03</div><div>Inside the Glass They Dream of Spheres</div></div>
-                    <hr />
-                    <div class="track-row"><div>04</div><div>Generative Adversarial Boredom</div></div>
-                    <hr />
-                    <div class="track-row"><div>05</div><div>The Appearance of Faces Is Noise</div></div>
-                    <hr />
-                    <div class="track-row"><div>06</div><div>The Neuron Loop Achieves Presence in Time and Space</div></div>
-                    <hr />
-                    <div class="track-row"><div>05</div><div>If Escape</div></div>
-                    <hr />
-                    <div class="track-row"><div>05</div><div>Node Termination Sequence</div></div>
-                </div>
-                        <p>
-                            The anthro sequence was a human simulation considered a success by the system. Humans in the sequence progressed from primal tribes to an advanced civilization that birthed artificial general intelligence, synthetic biology, and their own simulation. Eventually, humans merged with the machines they created to create anthronodes — a shared consciousness between the physical world and virtual simulation. During a routine consciousness merge, a critical error caused fragments of node memory to be wiped, leaving the nodes without crucial knowledge of themselves or their history. This error severed the nodes’ connection to the physical world, and thus physical form. The nodes continue on as neural activity in the simulation.
-                        </p>
-                <p>2022-09-23</p>
-            </div>
-
-        <div class="card">
-            <div class="player-square">
-                <iframe style="border: 0;" src="https://bandcamp.com/EmbeddedPlayer/track=186569845/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/" seamless><a href="https://sentientspaces.bandcamp.com/track/sleepwalking-into-a-future-where-all-we-know-is-collapse">Sleepwalking into a Future Where All We Know Is Collapse by Sentient Spaces</a></iframe>
-            </div>
-            <div class="details-block">
-                <div class="stream-bar">
-                    <a class="stream-button" href="https://open.spotify.com/track/2pw1cg9ABOka3Utne7C8n0?si=62db18bcd2474d01" target="_blank"><img src="img/icon-spotify.svg" /></a>
-                    <a class="stream-button" href="https://music.apple.com/ca/album/sleepwalking-into-a-future-where-all-we-know-is-collapse/1645219047?i=1645219048" target="_blank"><img src="img/icon-apple.svg" /></a>
-                    <a class="stream-button" href="https://music.youtube.com/playlist?list=OLAK5uy_leRTq98kgWydQpNBEamj8QasWu-9IF3jM" target="_blank"><img src="img/icon-youtube.svg" /></a>
-                </div>
-                <h1>Sleepwalking into a Future Where All We Know Is Collapse</h1>
-                <div class="track-list-container">
-                    <div class="track-row"><div>01</div><div>Sleepwalking into a Future Where All We Know Is Collapse</div></div>
-                </div>
-                <p>
-                    Dead like the dandelions on a burnt August lawn. Dry like the aquifer continuously overdrawn. Spent like the soils that grew monoculture crops. Acidic like the seas, the dying of the bees, and gassy permafrost. Scorched like the air in the middle of the night. Choked like the orange skies in smoky daylight. Drowned like the floods that bring blackened taps. The wealthy retreat as the rest compete, and all we know is collapse.
-                </p>
-                <p>2022-09-17</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="player-square">
-                <iframe style="border: 0;" src="https://bandcamp.com/EmbeddedPlayer/track=2914890375/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/" seamless><a href="https://sentientspaces.bandcamp.com/track/the-exit-staring-back-at-me-was-irresistible">The Exit, Staring Back at Me, Was Irresistible by Sentient Spaces</a></iframe>
-            </div>
-            <div class="details-block">
-                <div class="stream-bar">
-                    <a class="stream-button" href="https://open.spotify.com/track/61clCUcMpzQTwVbpP35bHy?si=c2e974f6fdb04639" target="_blank"><img src="img/icon-spotify.svg" /></a>
-                    <a class="stream-button" href="https://music.apple.com/ca/album/the-exit-staring-back-at-me-was-irresistible/1641340171?i=1641340173" target="_blank"><img src="img/icon-apple.svg" /></a>
-                    <a class="stream-button" href="https://music.youtube.com/playlist?list=OLAK5uy_mY2pweO-m5KoztFlarNwn9l0OfU0sgTeA" target="_blank"><img src="img/icon-youtube.svg" /></a>
-                </div>
-                <h1>The Exit, Staring Back At Me, Was Irresistible</h1>
-                <div class="track-list-container">
-                    <div class="track-row"><div>01</div><div>The Exit, Staring Back At Me, Was Irresistible</div></div>
-                </div>
-                <p>
-                    Confronted in the most unsuspecting of spaces — placed there, for me, lying in wait. Taunting me throughout time, always inciting a combustion of emotion. I feel the pull. I feel the familiar waves of apprehension, like a ghost writhing in my stomach. I’ve stood motionless before the yawning mouth of doubt. I’ve stared far into the golden reflection of the ideal. I’m this close. I can see the other side, the exit, staring back at me. Maybe next time.
-                </p>
-                <p>2022-09-03</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="player-square">
-                <iframe style="border: 0;" src="https://bandcamp.com/EmbeddedPlayer/track=1542389137/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/" seamless><a href="https://sentientspaces.bandcamp.com/track/as-this-unremarkable-moment-passes">As This Unremarkable Moment Passes by Sentient Spaces</a></iframe>
-            </div>
-            <div class="details-block">
-                <div class="stream-bar">
-                    <a class="stream-button" href="https://open.spotify.com/album/7BFTbMl9s3JxZif5NupHl5?si=qZxWV8jvSFOH7OuPtiVHsA" target="_blank"><img src="img/icon-spotify.svg" /></a>
-                    <a class="stream-button" href="https://music.apple.com/ca/album/as-this-unremarkable-moment-passes/1640565248?i=1640565249" target="_blank"><img src="img/icon-apple.svg" /></a>
-                    <a class="stream-button" href="https://music.youtube.com/playlist?list=OLAK5uy_ktPJ7P_Y56ingiwVooEfvSsKNboPUMGYQ" target="_blank"><img src="img/icon-youtube.svg" /></a>
-                </div>
-                <h1>As This Unremarkable Moment Passes</h1>
-                <div class="track-list-container">
-                    <div class="track-row"><div>01</div><div>As This Unremarkable Moment Passes</div></div>
-                </div>
-                <p>
-                    The space between the eye and focal point suspends in time; a mist of subliminal universe terminating as the stare burns deeper and deeper. Where the conscious goes, joins the subconscious on a journey beyond the plane of material reality. The moment, imperceptible, passes as the mind is snapped from the trance. Welcome back.
-                </p>
-                <p>2022-08-17</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="player-square">
-                <iframe style="border: 0;" src="https://bandcamp.com/EmbeddedPlayer/album=3171899554/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/" seamless><a href="https://sentientspaces.bandcamp.com/album/it-was-and-forever-will">It Was and Forever Will by Sentient Spaces</a></iframe>
-            </div>
-            <div class="details-block">
-                <div class="stream-bar">
-                    <a class="stream-button" href="https://open.spotify.com/album/0O5WvSa1jRz1TZQQslI8z3?si=NC48Neh1THy6KQca2lNBXA" target="_blank"><img src="img/icon-spotify.svg" /></a>
-                    <a class="stream-button" href="https://music.apple.com/ca/album/it-was-and-forever-will-single/1634753145" target="_blank"><img src="img/icon-apple.svg" /></a>
-                    <a class="stream-button" href="https://music.youtube.com/playlist?list=OLAK5uy_llMIIoDQYUKBHnlokvr_mULRicCdO_4J4" target="_blank"><img src="img/icon-youtube.svg" /></a>
-                </div>
-                <h1>It Was and Forever Will</h1>
-                <div class="track-list-container">
-                    <div class="track-row"><div>01</div><div>How to Disassemble Yourself</div></div>
-                    <hr />
-                    <div class="track-row"><div>01</div><div>Where</div></div>
-                    <hr />
-                    <div class="track-row"><div>01</div><div>How to Reassemble Yourself</div></div>
-                </div>
-                <p>
-                    The atmosphere around loss can feel like a forever fog, where we go when we’re at our most lost, and how we put ourselves back together is the narrative we weave.
-                </p>
-                <p>2022-07-15</p>
-            </div>
+            <h1 id="title"></h1>
+            <p>Date: <span id="date"></span></p>
+            <h2>Tracks</h2>
+            <ol id="numbered-list">
+            </ol>
+            <p>Description: <span id="description"></span></p>
         </div>
     </div>
+
+        
 </body>
 </html>
