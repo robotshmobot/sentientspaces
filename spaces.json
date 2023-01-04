@@ -1,6 +1,6 @@
 ﻿{
     "album": "Trash Meditation",
-    "date": "2023-01-04",
+    "date": "2022-10-21",
     "iframe": "https://bandcamp.com/EmbeddedPlayer/album=2942806774/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/",
     "spotify": "https://open.spotify.com/album/5cXLtQYG0llZvArSoSJVl0?si=5sM-EYVHQjmpD2odto6jYw",
     "apple": "https://music.apple.com/ca/album/trash-meditation/1650280522",
@@ -12,5 +12,51 @@
         "For Things That Cannot Be Recycled",
         "For Indulgent Landfill Gulls"
         ],
-    "description": "Little bit by itty bitty bit all our materials build up to become a bothersome bunch of shit.."
+    "description": "Little bit by itty bitty bit all our materials build up to become a bothersome bunch of shit."
+}
+
+{
+    "album": "The Appearance of Faces Is Noise",
+    "date": "2022-09-23",
+    "iframe": "https://bandcamp.com/EmbeddedPlayer/album=1128288492/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/",
+    "spotify": "https://open.spotify.com/album/6ZRxq19kFtCpuiJENGhx5x?si=5fGhRhSwR56gZ9s_up4XGQ",
+    "apple": "https://music.apple.com/ca/album/the-appearance-of-faces-is-noise/1640571689",
+    "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_kJYNGl8XrI-S1BivehpcE8AKS71FY6ZAQ",
+    "tracks": [
+        "Postanthro Outerlands",
+        "Phantom-Computer Interface",
+        "Inside the Glass They Dream of Spheres",
+        "Generative Adversarial Boredom",
+        "The Appearance of Faces Is Noise",
+        "The Neuron Loop Achieves Presence in Time and Space",
+        "If Escape",
+        "Node Termination Sequence"
+        ],
+    "description": "The anthro sequence was a human simulation considered a success by the system. Humans in the sequence progressed from primal tribes to an advanced civilization that birthed artificial general intelligence, synthetic biology, and their own simulation. Eventually, humans merged with the machines they created to create anthronodes — a shared consciousness between the physical world and virtual simulation. During a routine consciousness merge, a critical error caused fragments of node memory to be wiped, leaving the nodes without crucial knowledge of themselves or their history. This error severed the nodes’ connection to the physical world, and thus physical form. The nodes continue on as neural activity in the simulation."
+}
+
+{
+    "album": "Sleepwalking into a Future Where All We Know Is Collapse",
+    "date": "2022-09-17",
+    "iframe": "https://bandcamp.com/EmbeddedPlayer/track=186569845/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/",
+    "spotify": "https://open.spotify.com/track/2pw1cg9ABOka3Utne7C8n0?si=62db18bcd2474d01",
+    "apple": "https://music.apple.com/ca/album/sleepwalking-into-a-future-where-all-we-know-is-collapse/1645219047?i=1645219048",
+    "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_leRTq98kgWydQpNBEamj8QasWu-9IF3jM",
+    "tracks": [
+        "Sleepwalking into a Future Where All We Know Is Collapse"
+        ],
+    "description": "Dead like the dandelions on a burnt August lawn. Dry like the aquifer continuously overdrawn. Spent like the soils that grew monoculture crops. Acidic like the seas, the dying of the bees, and gassy permafrost. Scorched like the air in the middle of the night. Choked like the orange skies in smoky daylight. Drowned like the floods that bring blackened taps. The wealthy retreat as the rest compete, and all we know is collapse."
+}
+
+{
+    "album": "The Exit, Staring Back At Me, Was Irresistible",
+    "date": "2022-09-03",
+    "iframe": "https://bandcamp.com/EmbeddedPlayer/track=186569845/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/",
+    "spotify": "https://open.spotify.com/track/61clCUcMpzQTwVbpP35bHy?si=c2e974f6fdb04639",
+    "apple": "https://music.apple.com/ca/album/the-exit-staring-back-at-me-was-irresistible/1641340171?i=1641340173",
+    "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_mY2pweO-m5KoztFlarNwn9l0OfU0sgTeA",
+    "tracks": [
+        "The Exit, Staring Back At Me, Was Irresistible"
+        ],
+    "description": "Confronted in the most unsuspecting of spaces — placed there, for me, lying in wait. Taunting me throughout time, always inciting a combustion of emotion. I feel the pull. I feel the familiar waves of apprehension, like a ghost writhing in my stomach. I’ve stood motionless before the yawning mouth of doubt. I’ve stared far into the golden reflection of the ideal. I’m this close. I can see the other side, the exit, staring back at me. Maybe next time."
 }
