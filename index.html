@@ -18,7 +18,7 @@
     </style>
 
     <script>
-        fetch('spaces.json')
+        fetch('./spaces.json')
             .then(response => response.json())
             .then(json => {
                 // loop through the JSON data
