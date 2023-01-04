@@ -22,15 +22,24 @@
             .then(response => response.json())
             .then(data => {
                 // Populate the page with the data
-                document.getElementById('title').innerHTML = data.album;
-                document.getElementById('date').innerHTML = data.date;
-                document.getElementById('iframe').src = data.iframe;
-                data.tracks.forEach(item => {
-                    const li = document.createElement('li');
-                    li.innerHTML = item;
-                    document.getElementById('numbered-list').appendChild(li);
+                data.forEach(item => {
+                    const card = document.createElement('div');
+                    card.className = 'card';
+                    card.innerHTML = `
+              <div class="player-square">
+                <iframe src="${item.iframe}"></iframe>
+              </div>
+              <div class="details-block">
+                <h1>${item.title}</h1>
+                <ol>
+                  ${item.tracks.map(track => `<li>${track}</li>`).join('')}
+                </ol>
+                <p>${item.description}</p>
+                <p>${item.date}</p>
+              </div>
+            `;
+                    document.getElementById('cards').appendChild(card);
                 });
-                document.getElementById('description').innerHTML = data.description;
             });</script>
 
 
@@ -39,20 +48,8 @@
     <img class="sentient-title" src="img/sentient-spaces.svg" />
 
     <div class="page-container">
-        <div class="card">
-            <div class="player-square">
-                <iframe id="iframe"></iframe>
-            </div>
-            <div class="details-block">
-                <h1 id="title"></h1>
-                <ol id="numbered-list">
-                </ol>
-                <p><span id="description"></span></p>
-                <p><span id="date"></span></p>
-            </div>
-        </div>
+        <div class="card"></div>
     </div>
-
         
 </body>
 </html>
