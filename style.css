@@ -152,9 +152,9 @@ li + li {
 
     .logo-block {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
         width: 100%;
         max-width: 66vw;
         height: 50vh;
