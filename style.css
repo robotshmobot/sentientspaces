@@ -1,21 +1,21 @@
 body {
-    margin: 20px;
+    margin: 40px;
     background-color: #54555A;
     font-family: 'Archivo', sans-serif;
     font-weight: 400;
     color: #f1f1f1;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 24px;
     text-align: left;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 40px;
 }
 
 h1 {
-    font-size: 20px;
+    font-size: 32px;
     font-weight: 400;
-    line-height: 20px;
+    line-height: 40px;
     margin-block: 0px;
 }
 
@@ -32,7 +32,7 @@ p {
 }
 
 .sentient-title {
-    width: 25vw;
+    width: 30vw;
 }
 
 .page-container {
@@ -41,15 +41,15 @@ p {
     flex-direction: column;
     align-items: flex-start;
     padding: 0px;
-    gap: 20px;
+    gap: 40px;
 }
 
 .album-row {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    padding: 20px 0px;
-    gap: 20px;
+    padding-top: 40px;
+    gap: 40px;
     border-top: 1px solid #f1f1f1;
 }
 
@@ -102,7 +102,7 @@ p {
     flex: none;
     order: 0;
     flex-grow: 2;
-    gap: 20px;
+    gap: 10px;
 }
 
 .track-row {
@@ -111,9 +111,8 @@ p {
     flex-direction: row;
     align-items: flex-start;
     align-self: stretch;
-    padding-bottom: 20px;
-    gap: 20px;
-    border-bottom: 1px solid #f1f1f1;
+    padding-bottom: 10px;
+    gap: 10px;
 }
 
 hr {
@@ -142,39 +141,51 @@ li + li {
     padding-top: 10px;
 }
 
-/*    @media screen and (min-width: 1920px) {
-        .page-container {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            grid-gap: 20px;
-        }
+
+
+@media only screen and (max-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
-    @media screen and (max-width: 1366px) {
-        .page-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-gap: 20px;
-        }
+    .logo-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+        max-width: 66vw;
+        height: 50vh;
     }
 
-    @media screen and (max-width: 768px) {
-        .page-container {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-gap: 20px;
-        }
+    .sentient-title {
+        width: 30vw;
     }
 
-    @media screen and (max-width: 640px) {
+    .page-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px;
+        gap: 80px;
+    }
 
-        .sentient-title {
-            width: 100%;
-        }
+    .album-row {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 40px;
+        max-width: 66vw;
+        border-top: 0;
+    }
 
-        .page-container {
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
-            grid-gap: 20px;
-        }
-    }*/
+    .details-block {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
