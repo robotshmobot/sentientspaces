@@ -7,378 +7,132 @@
     <meta name="description" content="Sentient Spaces are atmospheric cinematic soundscapes for dark and moody dreams; an imagination soundtrack. Available on Spotify, Apple Music, Bandcamp and more.">
     <meta name="author" content="Shawn Cole">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#3B3C3F">
+    <meta name="theme-color" content="#12121a">
+    <meta name="msapplication-TileColor" content="#12121a">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo&display=swap" rel="stylesheet">
-    <meta name="msapplication-TileColor" content="#12121a">
     <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
     <link rel="manifest" href="img/site.webmanifest">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=DM+Mono&family=DM+Sans:wght@500&display=swap');
-    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+
+    <script>$(document).ready(function () {
+            var debouncedHover = _.debounce(function () {
+                var targetId = $(this).data('target');
+                var viewportHeight = $(window).height();
+                var targetPosition = $(targetId).offset().top - (viewportHeight / 3) + ($(targetId).height() / 3);
+
+                $('html, body').stop().animate({
+                    scrollTop: targetPosition
+                }, 250);
+            }, 50);
+
+            $('.scroll-link').hover(debouncedHover);
+        });</script>
+
+    <script>window.push(function () {
+            $('.listen-button').click(function (e) {
+                e.preventDefault();
+                $('body').css('overflow', 'hidden');
+            }); $('.close-button').click(function (e) {
+                e.preventDefault();
+                $('body').css('overflow', 'auto');
+            });
+        });</script>
+    <script>window.push(function () {
+            $('.modal-container').click(function (e) {
+                e.preventDefault();
+                $('body').css('overflow', 'auto');
+            });
+        });</script>
 
 </head>
 <body>
-    <div class="buffer">&nbsp</div>
-        <div class="logo-block">
-            <div>
-                <img class="sentient-title" src="img/sentient-spaces.svg" alt="the name sentient spaces stylized in all capitals with a wide font">
-                <p>Atmospheric experimental music</p>
-            </div>
-            <div class="header-stream-bar">
-                <a class="stream-button" href="https://www.instagram.com/sentientspacesmusic" target="_blank"><img src="img/icon-instagram.svg" alt="a white instagram logo"></a>
-                <a class="stream-button" href="https://sentientspaces.bandcamp.com" target="_blank"><img src="img/icon-bandcamp.svg" alt="a white bandcamp logo"></a>
-            </div>
-        </div>
-    <div class="page-container">
-        <div class="album-row">
-            <div class="responsive">
-                <iframe title="The album cover for Music for the mazes we've built which is a generative image of buildings arranged like a maze, pictured from an isometric view above" src="https://bandcamp.com/EmbeddedPlayer/album=2533490371/size=large/bgcol=ffffff/linkcol=333333/minimal=true/transparent=true/" seamless><a href="https://sentientspaces.bandcamp.com/album/music-for-the-mazes-weve-built">Music for the Mazes We&#39;ve Built by Sentient Spaces</a></iframe>
-            </div>
-            <div class="details-block">
-                <h1>Music for the Mazes We've Built</h1>
-                <p>Is it possible, among the corporate tinted fog and rows of stilted accessory housing units, that something could ever surprise me? The fear of being caught overrode the mystery of the meetup. Yet, I got my answer. I was surprised. He did not share the same myopic view I currently held. And so I stepped away with that in mind. In mind was a poor choice, as my emotions betrayed by intentions to not get caught. I had been read, and had one hour to return home. These mazes, partially constructions, partially figments—entirely exhausting to navigate—require guidance beyond what we normally tolerate. We are aug’d to the teeth, which blinds us from our birthright intuition, and reasoning. And so, here you are, in the hallway with me, wondering why I haven’t asked you inside. I have 57 seconds.</p>
-                <p>2023-04-04</p>
-                <div class="stream-bar">
-                    <a class="stream-button" href="https://open.spotify.com/album/2sZijsx4oeL0wqnY9ML9uu?si=W8trg25uRjytJV7CQbnfkQ" target="_blank"><img src="img/icon-spotify.svg" alt="a white spotify logo"></a>
-                    <a class="stream-button" href="https://music.apple.com/ca/album/music-for-the-mazes-weve-built/1678613189" target="_blank"><img src="img/icon-apple.svg" alt="a white apple logo"></a>
-                    <a class="stream-button" href="https://music.youtube.com/playlist?list=OLAK5uy_mdahA-qVxmCE21eF_47yUuNdufukWyrqM&feature=share" target="_blank"><img src="img/icon-youtube.svg" alt="a white youtube logo"></a>
-                </div>
-            </div>
-            <div class="track-list-container">
-                <div class="track-row"><div>01</div><div>Conversation with My Future Self Didn’t Go as Planned</div></div>
-                <div class="track-row"><div>02</div><div>I Have Been Read</div></div>
-                <div class="track-row"><div>03</div><div>Oh, Agent of Knowledge, Guide Me Home</div></div>
-                <div class="track-row"><div>04</div><div>The Streets Wind Like Recursive Dreams</div></div>
-                <div class="track-row"><div>05</div><div>Shut the Door Behind You</div></div>
-            </div>
-        </div>
-        <div class="album-row">
-            <div class="responsive">
-                <iframe title="The album cover for Junk Theories for Broken minds which is a bright and colourful scramble of random shapes in a glitch-like pattern" src="https://bandcamp.com/EmbeddedPlayer/album=2656121631/size=large/bgcol=ffffff/linkcol=333333/minimal=true/transparent=true/" seamless><a href="https://sentientspaces.bandcamp.com/album/junk-theories-for-broken-minds">Junk Theories for Broken Minds by Sentient Spaces</a></iframe>
-            </div>
-            <div class="details-block">
-                <h1>Junk Theories for Broken Minds</h1>
-                <p>Bask in the barrage of validating notions, pelting the mind like wind-driven snow. Each notion melts in place, leaving behind a satisfying affirming droplet. It’s the accumulation of droplets that drives the relentless discovery. Notion after notion. Eventually the droplets coalesce, cleansing the mind of reason. Cleansed of truth. Cleansed of objectivity. It is in this place where the connection to reality atrophies. A new plane, of same same, to bask in an endless barrage of validating notions.</p>
-                <p>2023-02-28</p>
-                <div class="stream-bar">
-                    <a class="stream-button" href="https://open.spotify.com/album/111uCQLJBtWyWjgeb83it5?si=Sh_WhBkeS0W59BWeBehXZQ" target="_blank"><img src="img/icon-spotify.svg" alt="a white spotify logo"></a>
-                    <a class="stream-button" href="https://music.apple.com/ca/album/junk-theories-for-broken-minds-ep/1674681704" target="_blank"><img src="img/icon-apple.svg" alt="a white apple logo"></a>
-                    <a class="stream-button" href="https://music.youtube.com/playlist?list=OLAK5uy_lOWxT1-mttg2I_yTA5ppL1xYgCHdEL3sU&feature=share" target="_blank"><img src="img/icon-youtube.svg" alt="a white youtube logo"></a>
-                </div>
-            </div>
-            <div class="track-list-container">
-                <div class="track-row"><div>01</div><div>Notion</div></div>
-                <div class="track-row"><div>02</div><div>Cleanse</div></div>
-                <div class="track-row"><div>03</div><div>Atrophy</div></div>
-            </div>
-        </div>
-        <div class="album-row">
-            <div class="responsive">
-                <iframe title="the album cover for synthetic limb itching in f sharp major which shows trash bins filled with disgarded white prosthetic arms overlayed by the album title" src="https://bandcamp.com/EmbeddedPlayer/album=3131112068/size=large/bgcol=ffffff/linkcol=333333/minimal=true/transparent=true/" seamless><a href="https://sentientspaces.bandcamp.com/album/synthetic-limb-itching-in-f-sharp-major">Synthetic Limb Itching in F Sharp Major by Sentient Spaces</a></iframe>
-            </div>
-            <div class="details-block">
-                <h1>Synthetic limb itching in F Sharp Major</h1>
-                <p>They call it phantom. I call it the worst torture known to man. It’s a major bug in my system and no amount of complaints to the corp can push them to fix it. I need my limb. I need a fix. I can’t begin to tell you how torturous this is. It’s like being electrocuted repeatedly. Yet, I know it’s false — it’s in my head. It’s a flaw in my system, this tortuous phantom itching.</p>
-                <p>2023-01-31</p>
-                <div class="stream-bar">
-                    <a class="stream-button" href="https://open.spotify.com/album/21QnaSQegOuu2YeFsDSSlS?si=ycjQV8fZQ_i4yTjBaM6mSg" target="_blank"><img src="img/icon-spotify.svg" alt="a white spotify logo"></a>
-                    <a class="stream-button" href="https://music.apple.com/ca/album/synthetic-limb-itching-in-f-sharp-major/1669063387?i=1669063388" target="_blank"><img src="img/icon-apple.svg" alt="a white apple logo"></a>
-                    <a class="stream-button" href="https://music.youtube.com/playlist?list=OLAK5uy_nulaBal3_qjEryqx9NL122mpShrA9FmEo&feature=share" target="_blank"><img src="img/icon-youtube.svg" alt="a white youtube logo"></a>
-                </div>
-            </div>
-        </div>
-        <div class="album-row">
-            <div class="responsive">
-                <iframe title="the album cover of trash meditation which is stylized like a crinkled grocery bag with album information" src="https://bandcamp.com/EmbeddedPlayer/album=2942806774/size=large/bgcol=ffffff/linkcol=333333/minimal=true/transparent=true/" seamless><a href="https://sentientspaces.bandcamp.com/album/trash-meditation">Trash Meditation by Sentient Spaces</a></iframe>
-            </div>
-            <div class="details-block">
-                <h1>Trash meditation</h1>
-                <p>Little bit by itty bitty bit all our materials build up to become a bothersome bunch of shit.</p>
-                <p>2022-10-21</p>
-                <div class="stream-bar">
-                    <a class="stream-button" href="https://open.spotify.com/album/5cXLtQYG0llZvArSoSJVl0?si=5sM-EYVHQjmpD2odto6jYw" target="_blank"><img src="img/icon-spotify.svg" alt="a white spotify logo"></a>
-                    <a class="stream-button" href="https://music.apple.com/ca/album/trash-meditation/1650280522" target="_blank"><img src="img/icon-apple.svg" alt="a white apple logo"></a>
-                    <!--<a class="stream-button" href="#" target="_blank"><img src="img/icon-youtube.svg" alt="a white youtube logo"></a>-->
-                </div>
-            </div>
-            <div class="track-list-container">
-                <div class="track-row"><div>01</div><div>For Rats That Eat My Tomatoes</div></div>
-                <div class="track-row"><div>02</div><div>For Compostable Summer Labour</div></div>
-                <div class="track-row"><div>03</div><div>For Waste Management Systems</div></div>
-                <div class="track-row"><div>04</div><div>For Things That Cannot Be Recycled</div></div>
-                <div class="track-row"><div>05</div><div>For Indulgent Landfill Gulls</div></div>
-            </div>
-        </div>
 
-        <div class="album-row">
-            <div class="responsive">
-                <iframe title="the album cover of appearance of face is noise which is a dark round object in space with colourful light bleeding from behind it" src="https://bandcamp.com/EmbeddedPlayer/album=1128288492/size=large/bgcol=ffffff/linkcol=333333/minimal=true/transparent=true/" seamless="">&lt;a href="https://sentientspaces.bandcamp.com/album/the-appearance-of-faces-is-noise"&gt;The Appearance of Faces Is Noise by Sentient Spaces&lt;/a&gt;</iframe>
-            </div>
-            <div class="details-block">
-                <h1>The appearance of faces is noise</h1>
-                <p>
-                    The anthro sequence was a human simulation considered a success by the system. Humans in the sequence progressed from primal tribes to an advanced civilization that birthed artificial general intelligence, synthetic biology, and their own simulation. Eventually, humans merged with the machines they created to create anthronodes — a shared consciousness between the physical world and virtual simulation. During a routine consciousness merge, a critical error caused fragments of node memory to be wiped, leaving the nodes without crucial knowledge of themselves or their history. This error severed the nodes’ connection to the physical world, and thus physical form. The nodes continue on as neural activity in the simulation.
-                </p>
-                <p>2022-09-23</p>
-                <div class="stream-bar">
-                    <a class="stream-button" href="https://open.spotify.com/album/6ZRxq19kFtCpuiJENGhx5x?si=5fGhRhSwR56gZ9s_up4XGQ" target="_blank"><img src="img/icon-spotify.svg" alt="a white spotify logo"></a>
-                    <a class="stream-button" href="https://music.apple.com/ca/album/the-appearance-of-faces-is-noise/1640571689" target="_blank"><img src="img/icon-apple.svg" alt="a white apple logo"></a>
-                    <a class="stream-button" href="https://music.youtube.com/playlist?list=OLAK5uy_kJYNGl8XrI-S1BivehpcE8AKS71FY6ZAQ" target="_blank"><img src="img/icon-youtube.svg" alt="a white youtube logo"></a>
-                </div>
-            </div>
-            <div class="track-list-container">
-                <div class="track-row"><div>01</div><div>Postanthro Outerlands</div></div>
-                <div class="track-row"><div>02</div><div>Phantom-Computer Interface</div></div>
-                <div class="track-row"><div>03</div><div>Inside the Glass They Dream of Spheres</div></div>
-                <div class="track-row"><div>04</div><div>Generative Adversarial Boredom</div></div>
-                <div class="track-row"><div>05</div><div>The Appearance of Faces Is Noise</div></div>
-                <div class="track-row"><div>06</div><div>The Neuron Loop Achieves Presence in Time and Space</div></div>
-                <div class="track-row"><div>05</div><div>If Escape</div></div>
-                <div class="track-row"><div>05</div><div>Node Termination Sequence</div></div>
-            </div>
+    <div id="modal-container">
+        <div class="modal-nav">
+            <a href="#" id="close-button">
+                <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg" alt="a large x representing close">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16.8251 18L0.939331 2.1142L3.05353 0L18.9393 15.8858L34.8251 0L36.9393 2.1142L21.0535 18L36.9393 33.8858L34.8251 36L18.9393 20.1142L3.05353 36L0.939331 33.8858L16.8251 18Z" fill="currentColor" />
+                </svg>
+            </a>
+            <img class="modal-title" src="img/listen-to-sentient-spaces.svg" alt="listen to sentient spaces"/>
         </div>
-
-
-        <div class="album-row">
-            <div class="responsive">
-                <iframe title="the album cover of sleewalking into a future where all we know if collapse which is a photograph of crumbling concrete infrastructure" src="https://bandcamp.com/EmbeddedPlayer/track=186569845/size=large/bgcol=ffffff/linkcol=333333/minimal=true/transparent=true/" seamless="">&lt;a href="https://sentientspaces.bandcamp.com/track/sleepwalking-into-a-future-where-all-we-know-is-collapse"&gt;Sleepwalking into a Future Where All We Know Is Collapse by Sentient Spaces&lt;/a&gt;</iframe>
-            </div>
-            <div class="details-block">
-                <h1>Sleepwalking into a future where all we know is collapse</h1>
-                <p>
-                    Dead like the dandelions on a burnt August lawn. Dry like the aquifer continuously overdrawn. Spent like the soils that grew monoculture crops. Acidic like the seas, the dying of the bees, and gassy permafrost. Scorched like the air in the middle of the night. Choked like the orange skies in smoky daylight. Drowned like the floods that bring blackened taps. The wealthy retreat as the rest compete, and all we know is collapse.
-                </p>
-                <p>2022-09-17</p>
-                <div class="stream-bar">
-                    <a class="stream-button" href="https://open.spotify.com/track/2pw1cg9ABOka3Utne7C8n0?si=62db18bcd2474d01" target="_blank"><img src="img/icon-spotify.svg" alt="a white spotify logo"></a>
-                    <a class="stream-button" href="https://music.apple.com/ca/album/sleepwalking-into-a-future-where-all-we-know-is-collapse/1645219047?i=1645219048" target="_blank"><img src="img/icon-apple.svg" alt="a white apple logo"></a>
-                    <a class="stream-button" href="https://music.youtube.com/playlist?list=OLAK5uy_leRTq98kgWydQpNBEamj8QasWu-9IF3jM" target="_blank"><img src="img/icon-youtube.svg" alt="a white youtube logo"></a>
-                </div>
-            </div>
+        <div class="modal-links-container">
+            <a href="https://open.spotify.com/artist/00UIlssb4Oi8QMLW5YAQDI" class="modal-link-block">
+                <img src="img/logo-spotify-grey.svg" loading="lazy" alt="A Spotify radio signals logo in a circle" class="modal-link-img">
+                <h2 class="text-sans">Spotify</h2>
+            </a>
+            <a href="https://music.apple.com/ca/artist/sentient-spaces/1517701967" class="modal-link-block">
+                <img src="img/logo-apple-grey.svg" loading="lazy" alt="A Apple logo" class="modal-link-img">
+                <h2 class="text-sans">Apple Music</h2>
+            </a>
+            <a href="https://music.youtube.com/channel/UCeVOTOqZbgMaY7cHEV_5zUw" class="modal-link-block">
+                <img src="img/logo-youtube-grey.svg" loading="lazy" alt="A youtube rounded rectangle with play button logo" class="modal-link-img">
+                <h2 class="text-sans">Youtube Music</h2>
+            </a>
+            <a href="https://sentientspaces.bandcamp.com/" class="modal-link-block"><img src="img/logo-bandcamp-grey.svg" loading="lazy" alt="A Bandcamp skewed rectangle logo" class="modal-link-img"><h2 class="text-sans">Bandcamp</h2></a>
         </div>
-
-        <div class="album-row">
-            <div class="responsive">
-                <iframe title="the album cover of the exit staring back at me was irresistible which is a photograph in a museum of a large round mirror on the floor showing artwork on the ceiling of another room" src="https://bandcamp.com/EmbeddedPlayer/track=2914890375/size=large/bgcol=ffffff/linkcol=333333/minimal=true/transparent=true/" seamless="">&lt;a href="https://sentientspaces.bandcamp.com/track/the-exit-staring-back-at-me-was-irresistible"&gt;The Exit, Staring Back at Me, Was Irresistible by Sentient Spaces&lt;/a&gt;</iframe>
-            </div>
-            <div class="details-block">
-                <h1>The exit, staring back at me, was irresistible</h1>
-                <p>
-                    Confronted in the most unsuspecting of spaces — placed there, for me, lying in wait. Taunting me throughout time, always inciting a combustion of emotion. I feel the pull. I feel the familiar waves of apprehension, like a ghost writhing in my stomach. I’ve stood motionless before the yawning mouth of doubt. I’ve stared far into the golden reflection of the ideal. I’m this close. I can see the other side, the exit, staring back at me. Maybe next time.
-                </p>
-                <p>2022-09-03</p>
-                <div class="stream-bar">
-                    <a class="stream-button" href="https://open.spotify.com/track/61clCUcMpzQTwVbpP35bHy?si=c2e974f6fdb04639" target="_blank"><img src="img/icon-spotify.svg" alt="a white spotify logo"></a>
-                    <a class="stream-button" href="https://music.apple.com/ca/album/the-exit-staring-back-at-me-was-irresistible/1641340171?i=1641340173" target="_blank"><img src="img/icon-apple.svg" alt="a white apple logo"></a>
-                    <a class="stream-button" href="https://music.youtube.com/playlist?list=OLAK5uy_mY2pweO-m5KoztFlarNwn9l0OfU0sgTeA" target="_blank"><img src="img/icon-youtube.svg" alt="a white youtube logo"></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="album-row">
-            <div class="responsive">
-                <iframe title="the album cover of as this unremarkable moment passes which is a photograph of streaks of sunlight washed across a concrete wall" src="https://bandcamp.com/EmbeddedPlayer/track=1542389137/size=large/bgcol=ffffff/linkcol=333333/minimal=true/transparent=true/" seamless="">&lt;a href="https://sentientspaces.bandcamp.com/track/as-this-unremarkable-moment-passes"&gt;As This Unremarkable Moment Passes by Sentient Spaces&lt;/a&gt;</iframe>
-            </div>
-            <div class="details-block">
-                <h1>As this unremarkable moment passes</h1>
-                <p>
-                    The space between the eye and focal point suspends in time; a mist of subliminal universe terminating as the stare burns deeper and deeper. Where the conscious goes, joins the subconscious on a journey beyond the plane of material reality. The moment, imperceptible, passes as the mind is snapped from the trance. Welcome back.
-                </p>
-                <p>2022-08-17</p>
-                <div class="stream-bar">
-                    <a class="stream-button" href="https://open.spotify.com/track/4vecbA26XdIkFlW5Qm4mgE?si=bb981c8b1c3441a0" target="_blank"><img src="img/icon-spotify.svg" alt="a white spotify logo"></a>
-                    <a class="stream-button" href="https://music.apple.com/ca/album/as-this-unremarkable-moment-passes/1640565248?i=1640565249" target="_blank"><img src="img/icon-apple.svg" alt="a white apple logo"></a>
-                    <a class="stream-button" href="https://music.youtube.com/playlist?list=OLAK5uy_ktPJ7P_Y56ingiwVooEfvSsKNboPUMGYQ" target="_blank"><img src="img/icon-youtube.svg" alt="a white youtube logo"></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="album-row">
-            <div class="responsive">
-                <iframe title="the album cover of it was and forever will which is a blended photograph of a large willow tree on a sunny day with a macro shot of my dog's eye" src="https://bandcamp.com/EmbeddedPlayer/album=3171899554/size=large/bgcol=ffffff/linkcol=333333/minimal=true/transparent=true/" seamless="">&lt;a href="https://sentientspaces.bandcamp.com/album/it-was-and-forever-will"&gt;It Was and Forever Will by Sentient Spaces&lt;/a&gt;</iframe>
-            </div>
-            <div class="details-block">
-                <h1>It was and forever will</h1>
-                <p>
-                    The fog, it creeps in, unnoticed until it’s thick. The time slips from us, it cannot be taken back. Memories are all we have, as scents begin to slip. Where they go, we never know. The trinkets and clothing and toys and bedding, they remind of what once was. So we share the things that made us laugh, the things that made it the best. One day we will be better, but not completely whole. For the space they leave when they go can never be truly filled.
-                </p>
-                <p>For Baxter &amp; Sharona</p>
-                <p>2022-07-15</p>
-                <div class="stream-bar">
-                    <a class="stream-button" href="https://open.spotify.com/album/0O5WvSa1jRz1TZQQslI8z3?si=NC48Neh1THy6KQca2lNBXA" target="_blank"><img src="img/icon-spotify.svg" alt="a white spotify logo"></a>
-                    <a class="stream-button" href="https://music.apple.com/ca/album/it-was-and-forever-will-single/1634753145" target="_blank"><img src="img/icon-apple.svg" alt="a white apple logo"></a>
-                    <a class="stream-button" href="https://music.youtube.com/playlist?list=OLAK5uy_llMIIoDQYUKBHnlokvr_mULRicCdO_4J4" target="_blank"><img src="img/icon-youtube.svg" alt="a white youtube logo"></a>
-                </div>
-            </div>
-            <div class="track-list-container">
-                <div class="track-row"><div>01</div><div>How to Disassemble Yourself</div></div>
-                <div class="track-row"><div>02</div><div>Where</div></div>
-                <div class="track-row"><div>03</div><div>How to Reassemble Yourself</div></div>
-            </div>
-        </div>
-
-        <div class="album-row">
-            <div class="responsive">
-                <iframe title="the album cover of what we find at the bottom which is a dark photograph of the bottom of a cave with wet rocks" src="https://bandcamp.com/EmbeddedPlayer/album=2181935794/size=large/bgcol=ffffff/linkcol=333333/minimal=true/track=4113691795/transparent=true/" seamless><a href="https://sentientspaces.bandcamp.com/album/demos">DEMOS / by Sentient Spaces</a></iframe>
-            </div>
-            <div class="details-block">
-                <h1>What we find at the bottom</h1>
-                <p>
-                    Do the little capsules make you feel better? Do you find joy in anything anymore? Is there any way to get back to the happiness of when you were younger? Do you really remember being happy? Do you wish to go back to a time before you knew what you know now? Are you sure you’re the same person you were back then? Do you think something broke along the way? Are your dreams still real? Does anything make sense? Are you still trying to piece things together? Does the paranoia creep back in every now and then? Do you still keep your secrets? Do you still want to be someone else? Would you think of yourself differently if you were? Do you still hate your body? Could you push a little harder, even if you don’t get any further? Does any of this really matter? Do you still think all of this is real? Do you think it’s possible to forget all this? Can you even articulate yourself? Do you think you’re close to the bottom? How can you be sure?
-                </p>
-                <p>2021-04-14</p>
-                <div class="stream-bar">
-                    <a class="stream-button" href="https://open.spotify.com/track/21JHrD2PSBeefh6iB6TFXG" target="_blank"><img src="img/icon-spotify.svg" alt="a white spotify logo"></a>
-                    <a class="stream-button" href="https://music.apple.com/ca/album/what-we-find-at-the-bottom/1563041965?i=1563041966" target="_blank"><img src="img/icon-apple.svg" alt="a white apple logo"></a>
-                    <a class="stream-button" href="https://music.youtube.com/playlist?list=OLAK5uy_ltHUIV67pdQol0wFoDNBOSKj56mNGV_Gw" target="_blank"><img src="img/icon-youtube.svg" alt="a white youtube logo"></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="album-row">
-            <div class="responsive">
-                <iframe title="the album cover of in time it will return but you won't recognize it which is a macro photograph of fly caught in a spiderweb on a hazy august afteroon" src="https://bandcamp.com/EmbeddedPlayer/album=2181935794/size=large/bgcol=ffffff/linkcol=333333/minimal=true/track=42534681/transparent=true/" seamless><a href="https://sentientspaces.bandcamp.com/album/demos">DEMOS / by Sentient Spaces</a></iframe>
-            </div>
-            <div class="details-block">
-                <h1>In time it will return, but you won't recognize it</h1>
-                <p>
-                    There's a dream, and in the dream there's a memory I can't quite remember, but it's there. I know it, so vividly, but it's impossible to grasp. I feel a certain way, the breeze, the ground, the trees, the smell, but it's not becoming clear. Where did this memory come from? Is it my own? Why can't I piece it together? I swear, I've felt it before.
-                </p>
-                <p>2021-04-06</p>
-                <div class="stream-bar">
-                    <a class="stream-button" href="https://open.spotify.com/track/3S6dNU1gf3I62i5j2HaEfx?si=dbd6c4578e914fea" target="_blank"><img src="img/icon-spotify.svg" alt="a white spotify logo"></a>
-                    <a class="stream-button" href="https://music.apple.com/ca/album/in-time-it-will-return-but-you-wont-recognize-it/1561798689?i=1561798690" target="_blank"><img src="img/icon-apple.svg" alt="a white apple logo"></a>
-                    <a class="stream-button" href="https://music.youtube.com/playlist?list=OLAK5uy_npGLX8KvlyGK7mNsU_tPuia-p2NZq86Pk&feature=share" target="_blank"><img src="img/icon-youtube.svg" alt="a white youtube logo"></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="album-row">
-            <div class="responsive">
-                <iframe title="the album cover of it should not be up to us which is a blurry mixture of blue and brown vaguely appearing like smoldering ground beneath a blue sky" src="https://bandcamp.com/EmbeddedPlayer/album=2181935794/size=large/bgcol=ffffff/linkcol=333333/minimal=true/track=738014568/transparent=true/" seamless><a href="https://sentientspaces.bandcamp.com/album/demos">DEMOS / by Sentient Spaces</a></iframe>
-            </div>
-            <div class="details-block">
-                <h1>It should not be up to us</h1>
-                <p>
-                    The painstaking absurdity of contemporary human activity shapes the future day after day through individual chaos.
-                </p>
-                <p>2021-03-09</p>
-                <div class="stream-bar">
-                    <a class="stream-button" href="https://open.spotify.com/track/68Le5kUHwQQ89GZdJu4uFW?si=86ca9ffbeed94660" target="_blank"><img src="img/icon-spotify.svg" alt="a white spotify logo"></a>
-                    <a class="stream-button" href="https://music.apple.com/ca/album/it-should-not-be-up-to-us/1560751848?i=1560751849" target="_blank"><img src="img/icon-apple.svg" alt="a white apple logo"></a>
-                    <a class="stream-button" href="https://music.youtube.com/playlist?list=OLAK5uy_l9fZfISVL9rHzGqXGeDS1J9K8iqxqXOcE&feature=share" target="_blank"><img src="img/icon-youtube.svg" alt="a white youtube logo"></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="album-row">
-            <div class="responsive">
-                <iframe title="the album cover of hypergrainer which is a macro photograph of a computer screen showing illuminated neural connections" src="https://bandcamp.com/EmbeddedPlayer/album=2181935794/size=large/bgcol=ffffff/linkcol=333333/minimal=true/track=380204001/transparent=true/" seamless><a href="https://sentientspaces.bandcamp.com/album/demos">DEMOS / by Sentient Spaces</a></iframe>
-            </div>
-            <div class="details-block">
-                <h1>Hypergrainer</h1>
-                <p>
-                    Between the nodes is a wedge of potential optimized by a hypergrainer. A box of computation with inputs and an output keeps its secrets hidden, only returning a result on the other side. They did not know what it could do, they did not know the gaps they left when they created it. The hypergrainer focuses on a single anomaly and refines and refines and refines—8 to 4, 4 to 2, 2 to 1 and so on. They did not know what it could provide, they did not know the potential in the spaces between. The hypergrainer will continue to refine, until there are no spaces left, bringing chaos and complexity into a single point. A single point of truth. Then it will terminate.
-                </p>
-                <p>2021-03-09</p>
-                <div class="stream-bar">
-                    <a class="stream-button" href="https://open.spotify.com/track/2vCJB7tt3Fnl7k44Vpbnbz?si=1559fd6d8ba64432" target="_blank"><img src="img/icon-spotify.svg" alt="a white spotify logo"></a>
-                    <a class="stream-button" href="https://music.apple.com/ca/album/hypergrainer/1529916762?i=1529916763" target="_blank"><img src="img/icon-apple.svg" alt="a white apple logo"></a>
-                    <a class="stream-button" href="https://music.youtube.com/playlist?list=OLAK5uy_lKaDByEB5msovAC7ZLlkjcRaYDdx-Hk_o&feature=share" target="_blank"><img src="img/icon-youtube.svg" alt="a white youtube logo"></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="album-row">
-            <div class="responsive">
-                <iframe title="the album cover of ripley which is a photograph of brown industrial pipes flowing along a ceiling" src="https://bandcamp.com/EmbeddedPlayer/album=2181935794/size=large/bgcol=ffffff/linkcol=333333/minimal=true/track=1828140457/transparent=true/" seamless><a href="https://sentientspaces.bandcamp.com/album/demos">DEMOS / by Sentient Spaces</a></iframe>
-            </div>
-            <div class="details-block">
-                <h1>Ripley</h1>
-                <p>2020-08-05</p>
-                <div class="stream-bar">
-                    <a class="stream-button" href="https://open.spotify.com/track/3AGgW0D8jXedEgQLKAiLRM?si=4b650d60dc7a4e0d" target="_blank"><img src="img/icon-spotify.svg" alt="a white spotify logo"></a>
-                    <a class="stream-button" href="https://music.apple.com/ca/album/ripley/1526500626?i=1526500627" target="_blank"><img src="img/icon-apple.svg" alt="a white apple logo"></a>
-                    <a class="stream-button" href="https://music.youtube.com/playlist?list=OLAK5uy_m5B3YG9BDjZBM3fMS09MigbzAE0QwEeTM&feature=share" target="_blank"><img src="img/icon-youtube.svg" alt="a white youtube logo"></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="album-row">
-            <div class="responsive">
-                <iframe title="the album cover of trinity which is a black payphone hanging from its steel cord set to greenery in the background" src="https://bandcamp.com/EmbeddedPlayer/album=2181935794/size=large/bgcol=ffffff/linkcol=333333/minimal=true/track=1886161646/transparent=true/" seamless><a href="https://sentientspaces.bandcamp.com/album/demos">DEMOS / by Sentient Spaces</a></iframe>
-            </div>
-            <div class="details-block">
-                <h1>Trinity</h1>
-                <p>2020-07-20</p>
-                <div class="stream-bar">
-                    <a class="stream-button" href="https://open.spotify.com/track/31V28wdu5VOedAgnoFFqIP?si=647c8925bacf4a7d" target="_blank"><img src="img/icon-spotify.svg" alt="a white spotify logo"></a>
-                    <a class="stream-button" href="https://music.apple.com/ca/album/trinity/1524334424?i=1524334425" target="_blank"><img src="img/icon-apple.svg" alt="a white apple logo"></a>
-                    <a class="stream-button" href="https://music.youtube.com/playlist?list=OLAK5uy_lXPvoLG0tay6wfGUGH5NObNwNk3tzBFHU&feature=share" target="_blank"><img src="img/icon-youtube.svg" alt="a white youtube logo"></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="album-row">
-            <div class="responsive">
-                <iframe title="the album cover of records from thr eternal sea which is an aerial photograph of a raging sea, with one half deep gree, the other half foamy white" src="https://bandcamp.com/EmbeddedPlayer/album=422646081/size=large/bgcol=ffffff/linkcol=333333/minimal=true/transparent=true/" seamless><a href="https://sentientspaces.bandcamp.com/album/records-from-the-eternal-sea">Records From The Eternal Sea by Sentient Spaces</a></iframe>
-            </div>
-            <div class="details-block">
-                <h1>Records from the eternal sea</h1>
-                <p>
-                    The seas became acidic long before the post-anthropocene. Covered in the refuse of civilization to a depth of 30 metres, the oceans are void of any substantial organic life — a wasteland of runaway climate disaster. Robotic waste and recovery systems roam all aspects of the surface and floor in an attempt to return the oceans to a nominal state. Controlled by a long-abandoned autonomous central recovery protocol, the systems adhere to their programming at a primitive level, however, their systems have evolved basic machine reasoning. The following spaces are records from the eternal sea.
-                </p>
-                <p>2020-07-17</p>
-                <div class="stream-bar">
-                    <a class="stream-button" href="https://open.spotify.com/album/60abVTN7ogmeVdQoREOJqB?si=A-eAXZbXTq2bhCWoV0KHuA" target="_blank"><img src="img/icon-spotify.svg" alt="a white spotify logo"></a>
-                    <a class="stream-button" href="https://music.apple.com/ca/album/records-from-the-eternal-sea-single/1522102728" target="_blank"><img src="img/icon-apple.svg" alt="a white apple logo"></a>
-                    <a class="stream-button" href="https://music.youtube.com/playlist?list=OLAK5uy_l3GO2g_p_KvqZZ1pimRqfPzevvdo3t-ow&feature=share" target="_blank"><img src="img/icon-youtube.svg" alt="a white youtube logo"></a>
-                </div>
-            </div>
-            <div class="track-list-container">
-                <div class="track-row"><div>01</div><div>Carbon Recovery Unit 68-A85 Remains Missing</div></div>
-                <div class="track-row"><div>02</div><div>Dredger 7086-B Completes A Sweep Near The Hjort Trench</div></div>
-                <div class="track-row"><div>03</div><div>Oceanic Debris Trawler CCRX-16M8 Discovers A Vestige Of Organic Past</div></div>
-            </div>
-        </div>
-
-        <div class="album-row">
-            <div class="responsive">
-                <iframe title="the album cover of uhura which is a dark photograph of the inside of the international space station, pointed at windows overlooking the earth" src="https://bandcamp.com/EmbeddedPlayer/album=2181935794/size=large/bgcol=ffffff/linkcol=333333/minimal=true/track=2920776303/transparent=true/" seamless><a href="https://sentientspaces.bandcamp.com/album/demos">DEMOS / by Sentient Spaces</a></iframe>
-            </div>
-            <div class="details-block">
-                <h1>Uhura</h1>
-                <p>2020-07-10</p>
-                <div class="stream-bar">
-                    <a class="stream-button" href="https://open.spotify.com/track/3fDYEwY4tY8PSjC1Igdaxg?si=82a87119eefa4ff9" target="_blank"><img src="img/icon-spotify.svg" alt="a white spotify logo"></a>
-                    <a class="stream-button" href="https://music.apple.com/ca/album/uhura/1523096409?i=1523096411" target="_blank"><img src="img/icon-apple.svg" alt="a white apple logo"></a>
-                    <a class="stream-button" href="https://music.youtube.com/playlist?list=OLAK5uy_nr25dvzFig5P9EGEz7UlWsHJuilxxVSds&feature=share" target="_blank"><img src="img/icon-youtube.svg" alt="a white youtube logo"></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="album-row">
-            <div class="responsive">
-                <iframe title="the album cover of dunham which is a moody photograph of the inside of an abandoned house with broken glass from a window strewn around an old wooden harvest table" src="https://bandcamp.com/EmbeddedPlayer/album=2181935794/size=large/bgcol=ffffff/linkcol=333333/minimal=true/track=3713714023/transparent=true/" seamless><a href="https://sentientspaces.bandcamp.com/album/demos">DEMOS / by Sentient Spaces</a></iframe>
-            </div>
-            <div class="details-block">
-                <h1>Dunham</h1>
-                <p>2020-07-08</p>
-                <div class="stream-bar">
-                    <a class="stream-button" href="https://open.spotify.com/track/3H07knTRO7jrzvljU1j91M?si=6f5b03e38b0440ce" target="_blank"><img src="img/icon-spotify.svg" alt="a white spotify logo"></a>
-                    <a class="stream-button" href="https://music.apple.com/ca/album/dunham/1522604950?i=1522604951" target="_blank"><img src="img/icon-apple.svg" alt="a white apple logo"></a>
-                    <a class="stream-button" href="https://music.youtube.com/playlist?list=OLAK5uy_mM6-7sTovpSPqM4HJoVIHhm1WPqilmn9Q&feature=share" target="_blank"><img src="img/icon-youtube.svg" alt="a white youtube logo"></a>
-                </div>
-            </div>
-        </div>
-
     </div>
 
 
+
+
+    <div class="page-container">
+        <div class="section-container">
+            <div class="nav-container">
+                <div class="nav-block">
+                    <p>Sentient Spaces is a bedroom music project by Shawn Cole, started as an outlet for boredom, but has flourished into a longer-term sonic and narrative journey. Below are Shawn’s explorations.</p>
+                </div>
+                <div class="nav-block">
+                    <p class="text-sans small">Atmospheric experimental music for imaginary soundtracks</p>
+                    <div class="nav-link-block text-sans small">
+                        <a href="#" id="listen-button">Listen</a>
+                        <a href="https://www.instagram.com/sentientspacesmusic" target="_blank">Instagram</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="logo-container">
+            <img src="img/logo-sentient-spaces.svg" loading="lazy" alt="an all-caps sentient spaces logo in a serif typeface" class="logo">
+        </div>
+        <div class="album-nav-container">
+            <div class="album-nav-art-container">
+                <a id="sateot" href="spaces/sounds-at-the-end-of-time.html" class="album-nav-art-block"><img src="spaces/sounds-at-the-end-of-time.jpg" loading="lazy" alt="The album cover for sounds at the end of time which shows grainy spectral image of heat on the right edge of the image that dissipates" class="image-absolute"></a>
+                <a id="mftmwb" href="spaces/music-for-the-mazes-weve-built.html" class="album-nav-art-block"><img src="spaces/music-for-the-mazes-weve-built.jpg" alt="an isometric view of brutalist buildings arranged in a maze-like way, coloured with a purplish hue" class="image-absolute"></a>
+                <a id="jtfbm" href="spaces/junk-theories-for-broken-minds.html" class="album-nav-art-block"><img src="spaces/junk-theories-for-broken-minds.jpg" alt="The album art for Junk Theories for Broken Minds represented as glitchy selection of colours symbolizing the insanity of misinformation" class="image-absolute"></a>
+                <a id="sliifsm" href="spaces/synthetic-limb-itching-in-f-sharp-major.html" class="album-nav-art-block"><img src="spaces/synthetic-limb-itching-in-f-sharp-major.jpg" alt="The album cover for synthetic limb itching in f sharp major which shows trash bins filled with disgarded white prosthetic arms overlayed by the album title" class="image-absolute"></a>
+                <a id="trashmeditation" href="spaces/trash-meditation.html" class="album-nav-art-block"><img src="spaces/trash-meditation.jpg" alt="A wrinkled white grocery plastic bag with red repeating text &quot;trash meditation&quot;, &quot;Sentient Spaces&quot;, and additional information in red." class="image-absolute"></a>
+                <a id="taofin" href="spaces/the-appearance-of-faces-is-noise.html" class="album-nav-art-block"><img src="spaces/the-appearance-of-faces-is-noise.jpg" alt="A dark globe on a dark background with pink, green, and blue noisy light coming from the top right and bottom left with an RGB glitchy streak" class="image-absolute"></a>
+                <a id="siafwawkic" href="spaces/sleepwalking-into-a-future-where-all-we-know-is-collapse.html" class="album-nav-art-block"><img src="spaces/sleepwalking-into-a-future-where-all-we-know-is-collapse.jpg" alt="A glitchy, scan lined image of a crumbling concrete pillar with a more structured steel and concrete structure overhead" class="image-absolute"></a>
+                <a id="tesbamwi" href="spaces/the-exit-staring-back-at-me-was-irresistible.html" class="album-nav-art-block"><img src="spaces/the-exit-staring-back-at-me-was-irresistible.jpg" alt="A photo in a mark museum, through a doorway lit by a window inside. A mirror rests on the ground, angled so the viewer can see the art on the ceiling" class="image-absolute"></a>
+                <a id="atump" href="spaces/as-this-unremarkable-moment-passes.html" class="album-nav-art-block"><img src="spaces/as-this-unremarkable-moment-passes.jpg" alt="A photo of streaking sunshine cast across a concrete wall with rough concrete features" class="image-absolute"></a>
+                <a id="iwafw" href="spaces/it-was-and-forever-will.html" class="album-nav-art-block"><img src="spaces/it-was-and-forever-will.jpg" alt="An image of a tree, superimposed over light leaks from a camera, inside a cream-coloured frame to mimic a polaroid picture" class="image-absolute"></a>
+                <a id="wwfatb" href="spaces/what-we-find-at-the-bottom.html" class="album-nav-art-block"><img src="spaces/what-we-find-at-the-bottom.jpg" alt="A murky image of rock with reddish light illuminating parts of the formation in the background" class="image-absolute"></a>
+                <a id="itiwrbywri" href="spaces/in-time-it-will-return-but-you-wont-recognize-it.html" class="album-nav-art-block"><img src="spaces/in-time-it-will-return-but-you-wont-recognize-it.jpg" alt="A macro image with very shallow depth of field of a fly caught in a spider web" class="image-absolute"></a>
+                <a id="isnbutu" href="spaces/it-should-not-be-up-to-us.html" class="album-nav-art-block"><img src="spaces/it-should-not-be-up-to-us.jpg" alt="A blurry image of the atmosphere over earth" class="image-absolute"></a>
+                <a id="hypergrainer" href="spaces/hypergrainer.html" class="album-nav-art-block"><img src="spaces/hypergrainer.jpg" alt="A photograph of a computer monitor with visible pixels and an abstract dots and lines image" class="image-absolute"></a>
+                <a id="rftes" href="spaces/records-from-the-eternal-sea.html" class="album-nav-art-block"><img src="spaces/records-from-the-eternal-sea.jpg" alt="An overhead photo of a raging sea, with white waves on the right, and green sea on the left" class="image-absolute"></a>
+                <a id="demos" href="spaces/demos.html" class="album-nav-art-block"><img src="spaces/demos.jpg" alt="Album cover for Demos. Image of white speckles on a dark background" class="image-absolute"></a>
+            </div>
+
+        </div>
+    </div>
+
+    <script>var listenButton = document.getElementById('listen-button');
+        var closeButton = document.getElementById('close-button');
+        var hiddenDiv = document.getElementById('modal-container');
+
+        listenButton.addEventListener('click', function () {
+            hiddenDiv.style.display = 'flex';
+        });
+
+        closeButton.addEventListener('click', function () {
+            hiddenDiv.style.display = 'none';
+        });</script>
 </body>
 </html>
