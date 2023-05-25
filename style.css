@@ -55,6 +55,17 @@ img {
     border: 0;
 }
 
+.footer-container {
+    justify-content: center;
+    align-items: center;
+    padding: 4em;
+    display: flex;
+}
+
+.footer-logo {
+    height: 2em;
+}
+
 .bye-mrg {
     margin-bottom: 0;
 }
