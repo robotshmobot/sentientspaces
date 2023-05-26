@@ -98,6 +98,7 @@ img {
 
 .nav-container {
     grid-column-gap: 1em;
+    grid-row-gap: 1em;
     grid-row-gap: 0px;
     justify-content: space-between;
     align-items: flex-start;
@@ -308,4 +309,14 @@ img {
 .grid-art-block {
     padding: 0;
     width: 100%;
+}
+
+@media only screen and (max-width: 480px) {
+    .nav-container {
+        flex-direction: column;
+    }
+
+    .album-nav-art-container {
+        grid-template-columns: 1fr 1fr;
+    }
 }
