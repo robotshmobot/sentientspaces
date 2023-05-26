@@ -316,7 +316,15 @@ img {
         flex-direction: column;
     }
 
+    .nav-block {
+        width: auto;
+    }
+
     .album-nav-art-container {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .album-text {
+        font-size: 1.1em;
     }
 }
