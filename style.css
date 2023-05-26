@@ -337,3 +337,11 @@ img {
         padding-left: 1em;
         padding-bottom: 1em;
     }
+
+    .album-page-nav-container {
+        padding: .5em;
+        gap: .5em;
+        align-content: center;
+    }
+
+}
